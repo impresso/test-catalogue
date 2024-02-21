@@ -1,6 +1,6 @@
 name: Add a source of text data
 description: Add the description of a source containing textual data.
-title: "[Source Text Data Entry]: "
+title: "[Data Entry for (Row) Text Data]: "
 #labels: ["source-data-candidate"]
 #projects: ["octo-org/1", "octo-org/44"]
 #assignees:
