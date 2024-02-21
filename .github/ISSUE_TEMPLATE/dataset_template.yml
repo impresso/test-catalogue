@@ -15,39 +15,39 @@ body:
     attributes:
       label: UID of the record
       description: Please provide a short `snake_case` alias to your record.
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: description
     attributes:
       label: Two-sentence description of the record
       description: Let us know briefly what is the dataset about.
-      validations:
-        required: true
+    validations:
+      required: true
   - type: input
     id: url
     attributes:
       label: URL where the dataset is published/available
-      validations:
-        required: true
+    validations:
+      required: true
   - type: input
     id: related_paper
     attributes:
       label: Related scientific paper (URL)
-      validations:
-        required: false
+    validations:
+      required: false
   - type: input
     id: datasheet
     attributes:
       label: Datasheet or dataset card (URL, if available)
-      validations:
-        required: false
+    validations:
+      required: false
   - type: input
     id: dataset_custodian
     attributes:
       label: Dataset custodian (email)
-      validations:
-        required: true
+    validations:
+      required: true
   - type: markdown
     attributes:
       value: |
@@ -59,6 +59,8 @@ body:
       description: You can select multiple values from the dropdown
       multiple: true
       options: [ready-to-process, requires-copyright-clearance, requires-format-conversion, requires-quality-enhancement]
+    validations:
+      required: false
 
 
 
