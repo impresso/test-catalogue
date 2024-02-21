@@ -9,7 +9,7 @@ Do you know about an existing dataset or a (large) set of raw documents with tex
 
 We invite you to contribute two types of data record:
 
-- A source record [[Issue Template for Source Record]()], i.e. a set of raw documents containing textual data that is far from being a processable dataset.  
+- A source record [\[Issue Template for Source Record\]](), i.e. a set of raw documents containing textual data that is far from being a processable dataset.  
 
-- A dataset record: [[Issue Template for Dataset Record]()]
+- A dataset record: [\[Issue Template for Dataset Record\]]()
 
