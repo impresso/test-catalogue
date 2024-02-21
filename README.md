@@ -8,8 +8,8 @@ This repository organise the collection and curation of datasets for the SwissAi
 Do you know about an existing dataset or a (large) set of raw documents with textual data? Do not hesitate to contribute to the SwissAI data catalogue. It is as simple as opening an [issue](https://github.com/impresso/test-catalogue/issues/new/choose).
 
 We invite you to contribute two types of data record:
-- A source record -  ![Static Badge](https://img.shields.io/badge/data_record-source_issue_template-blue)
- A source record is a set of raw documents containing textual data, but is far from ready yet
 
-- A dataset -  ![Static Badge](https://img.shields.io/badge/data_record-dataset_issue_template-blue)
+- A source record, i.e. a set of raw documents containing textual data that is far from being a processable dataset.  [Issue Template for Source Record]()
+
+- A dataset record: [Issue Template for Dataset Record]()
 
