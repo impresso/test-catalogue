@@ -7,9 +7,9 @@ title: "[Dataset Entry for the SwissAI Data Catalogue]: "
 #  - tbd
 body:
   - type: markdown
-      attributes:
-        value: |
-          Let's start with some generic information.
+    attributes:
+      value: |
+        Let's start with some generic information.
   - type: input
     id: uid
     attributes:
@@ -17,10 +17,48 @@ body:
       description: Please provide a short `snake_case` alias to your record.
       validations:
         required: true
-  - type: input
-    id: uid
+  - type: textarea
+    id: description
     attributes:
       label: Two-sentence description of the record
       description: Let us know briefly what is the dataset about.
       validations:
         required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL where the dataset is published/available
+      validations:
+        required: true
+  - type: input
+    id: related_paper
+    attributes:
+      label: Related scientific paper (URL)
+      validations:
+        required: false
+  - type: input
+    id: datasheet
+    attributes:
+      label: Datasheet or dataset card (URL, if available)
+      validations:
+        required: false
+  - type: input
+    id: dataset_custodian
+    attributes:
+      label: Dataset custodian (email)
+      validations:
+        required: true
+  - type: markdown
+    attributes:
+      value: |
+        Information about the dataset itself
+  - type: dropdown
+    id: dataset_status
+    attributes:
+      label: Dataset processing status
+      description: You can select multiple values from the dropdown
+      multiple: true
+      options: [ready-to-process, requires-copyright-clearance, requires-format-conversion, requires-quality-enhancement]
+
+
+
