@@ -24,6 +24,6 @@ jobs:
         run: |
           git config --global user.email "maud.ehrmann@epfl.ch"
           git config --global user.name "GitHub Actions"
-          git add datasets/test_submission.json
+          git add datasets/${{ steps.issue-parser.outputs.issueparser_uid }}.json
           git commit -m "push new record"
           git push
