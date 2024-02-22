@@ -11,9 +11,9 @@ Do you know about an existing dataset or a (large) set of raw textual documents?
 
 We invite you to contribute two types of data record:
 
-- A dataset record: [\[Issue Template for Dataset Record\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=dataset_template.yml&title=%5BAdd+a+dataset+record%5D%3A+)
+- A dataset record [\[ Dataset Record Issue Template\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=dataset_template.yml&title=%5BAdd+a+dataset+record%5D%3A+)
 
-- A source record [\[Issue Template for Source Record\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=source_text_data_template.yml&title=%5BData+Entry+for+%28Row%29+Text+Data%5D%3A+)
+- A source record [\[Text Source Data Issue Template\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=source_text_data_template.yml&title=%5BData+Entry+for+%28Row%29+Text+Data%5D%3A+)
 
 ## Guidelines on how to contribute a dataset
 
