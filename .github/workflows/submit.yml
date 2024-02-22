@@ -1,10 +1,14 @@
 name: Submit dataset record
 on:
   issues:
-    types: opened
+    types: [labeled]
+jobs:
+  setup:
+    if: ${{ github.event.label.name == 'dataset_candidate' }}
+
 concurrency: 'main'
 jobs:
-  place_order:
+  submit_dataset:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
