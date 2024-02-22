@@ -3,30 +3,28 @@ on:
   issues:
     types: [labeled]
 jobs:
-  setup:
-    if: ${{ github.event.label.name == 'dataset_candidate' }}
-
+  submit_dataset:
     concurrency: 'main'
-    submit_dataset:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
+    runs-on: ubuntu-latest
+    if: ${{ github.event.label.name == 'dataset_candidate' }} #source-data-candidate
+    steps:
+      - uses: actions/checkout@v2
 
-        - uses: actions/setup-node@v2
-          with:
-            node-version: '16'
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
 
-        - uses: stefanbuck/github-issue-praser@v3
-          id: issue-parser
-          with:
-            template-path: .github/ISSUE_TEMPLATE/dataset_template.yml
+      - uses: stefanbuck/github-issue-praser@v3
+        id: issue-parser
+        with:
+          template-path: .github/ISSUE_TEMPLATE/dataset_template.yml
 
-        - run: echo '${{ steps.issue-parser.outputs.jsonString }}' >  datasets/${{ steps.issue-parser.outputs.issueparser_uid }}.json
+      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' >  datasets/${{ steps.issue-parser.outputs.issueparser_uid }}.json
 
-        - name: Commit changes
-          run: |
-            git config --global user.email "maud.ehrmann@epfl.ch"
-            git config --global user.name "GitHub Actions"
-            git add datasets/${{ steps.issue-parser.outputs.issueparser_uid }}.json
-            git commit -m "push new record"
-            git push
+      - name: Commit changes
+        run: |
+          git config --global user.email "maud.ehrmann@epfl.ch"
+          git config --global user.name "GitHub Actions"
+          git add datasets/${{ steps.issue-parser.outputs.issueparser_uid }}.json
+          git commit -m "push new record"
+          git push
