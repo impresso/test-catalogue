@@ -18,7 +18,7 @@ jobs:
         with:
           template-path: .github/ISSUE_TEMPLATE/dataset_template.yml
 
-      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' >  datasets/${{issueparser_uid}}.json
+      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' >  datasets/${{ steps.issue-parser.outputs.issueparser_uid }}.json
 
       - name: Commit changes
         run: |
