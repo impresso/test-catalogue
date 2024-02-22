@@ -1,30 +1,43 @@
 name: Submit dataset record
+
 on:
   issues:
     types: [labeled]
+
+concurrency:
+  group: dataset-submission-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
 jobs:
   submit_dataset:
-    concurrency: 'main'
+    if: ${{ github.event.label.name == 'dataset_candidate' }}
     runs-on: ubuntu-latest
-    if: ${{ github.event.label.name == 'dataset_candidate' }} #source-data-candidate
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3 # Updated to the latest version
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4 # Updated to use Node.js 20
         with:
-          node-version: '16'
+          node-version: '20'
 
-      - uses: stefanbuck/github-issue-praser@v3
+      - name: Create dataset directory
+        run: mkdir -p datasets
+
+      - uses: stefanbuck/github-issue-parser@v3
         id: issue-parser
         with:
           template-path: .github/ISSUE_TEMPLATE/dataset_template.yml
 
-      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' >  datasets/${{ steps.issue-parser.outputs.issueparser_uid }}.json
+      - name: Save dataset record
+        run: echo '${{ steps.issue-parser.outputs.jsonString }}' > datasets/${{ steps.issue-parser.outputs.issueparser_uid }}.json
 
       - name: Commit changes
         run: |
           git config --global user.email "maud.ehrmann@epfl.ch"
           git config --global user.name "GitHub Actions"
           git add datasets/${{ steps.issue-parser.outputs.issueparser_uid }}.json
-          git commit -m "push new record"
-          git push
+          git commit -m "Add new dataset record"
+          if [ $? -eq 0 ]; then
+            git push
+          else
+            echo "No changes to commit"
+          fi
