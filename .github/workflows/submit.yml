@@ -40,6 +40,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
+          git config --global user.email "maud.ehrmann@epfl.ch"
+          git config --global user.name "maud.ehrmann"
           git add datasets/${{ steps.issue-parser.outputs.issueparser_uid }}.json
           git commit -m "Add new dataset record for issue #${{ github.event.issue.number }}"
           git push || echo "No changes to commit or push"
