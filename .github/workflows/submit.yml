@@ -35,7 +35,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.email "${{ steps.issue-parser.outputs.issueparser_dataset_custodian }}"
+          EMAIL=$(echo '${{ steps.issue-parser.outputs.issueparser_ }}' | jq -r 'dataset_custodian')
+          git config --global user.email "$EMAIL"
           git config --global user.name "No Name"
 
       - name: Commit and push changes
