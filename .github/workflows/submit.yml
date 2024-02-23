@@ -58,3 +58,19 @@ jobs:
               repo: context.repo.repo,
               body: message
             });
+
+      - name: Update README
+        run: |
+          DATASET_NAME=$(echo '${{ steps.issue-parser.outputs.jsonString }}' | jq -r '.dataset_name')
+          DATASET_STATUS=$(echo '${{ steps.issue-parser.outputs.jsonString }}' | jq -r '.dataset_status')
+          sed -i "/<!-- DATASET_LIST -->/a * **${DATASET_NAME}**: ${DATASET_STATUS}" README.md
+
+      - name: Commit README changes
+        run: |
+          git add README.md
+          git commit -m "Update README with new dataset"
+          if [ $? -eq 0 ]; then
+            git push
+          else
+            echo "No changes to commit"
+          fi
