@@ -1,4 +1,4 @@
-name: Bug Report
+name: test template
 description: File a bug report
 title: "[Test template]: "
 labels: ["bug", "triage"]
