@@ -10,13 +10,10 @@ This repository organise the collection and curation of datasets for the SwissAi
 Do you know about an existing dataset or a (large) set of raw textual documents?      
 Do not hesitate to contribute to the SwissAI data catalogue - it is as simple as opening an [issue](https://github.com/impresso/test-catalogue/issues/new/choose)!
 
-We invite you to contribute two types of data record:
-- A dataset record [\[Dataset Record Issue Template\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=dataset_template.yml&title=%5BAdd+a+dataset+record%5D%3A+)
-- A source record [\[Text Source Data Issue Template\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=source_text_data_template.yml&title=%5BData+Entry+for+%28Row%29+Text+Data%5D%3A+)
 
-[Overview](#overview)
-[How to contribute](#how-to-contribute)
-[Guidelines](#guidelines)
+[Overview](#overview)    
+[How to contribute](#how-to-contribute)    
+[Guidelines](#guidelines)    
 
 ## Overview
 
@@ -33,6 +30,11 @@ There are two phases:
 [main priorities and principles]
 
 ## How to contribute
+
+We invite you to contribute two types of data record:
+- A dataset record [\[Dataset Record Issue Template\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=dataset_template.yml&title=%5BAdd+a+dataset+record%5D%3A+)
+- A source record [\[Text Source Data Issue Template\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=source_text_data_template.yml&title=%5BData+Entry+for+%28Row%29+Text+Data%5D%3A+)
+
 ### How to contribute a dataset record
 1. Please begin by carefully reading the [guidelines](#guidelines) below. 
 2. Complete a dataset or source issue template and submit it.
