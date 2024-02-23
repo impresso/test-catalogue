@@ -21,4 +21,5 @@ We invite you to contribute two types of data record:
 
 ## Datasets
 <!-- DATASET_LIST -->
+* **zany-sea-dataset**: requires-copyright-clearance
 * **brisk-durian-dataset**: ready-to-process
