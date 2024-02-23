@@ -22,5 +22,3 @@ We invite you to contribute two types of data record:
 ## Datasets
 <!-- DATASET_LIST -->
 * **brisk-durian-dataset**: ready-to-process
-* **null**: requires-format-conversion
-* **null**: requires-format-conversion
