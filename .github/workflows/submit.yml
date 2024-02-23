@@ -61,7 +61,7 @@ jobs:
 
       - name: Update README
         run: |
-          DATASET_NAME=$(echo '${{ steps.issue-parser.outputs.jsonString }}' | jq -r '.dataset_name')
+          DATASET_NAME=$(echo '${{ steps.issue-parser.outputs.jsonString }}' | jq -r '.uid')
           DATASET_STATUS=$(echo '${{ steps.issue-parser.outputs.jsonString }}' | jq -r '.dataset_status')
           sed -i "/<!-- DATASET_LIST -->/a * **${DATASET_NAME}**: ${DATASET_STATUS}" README.md
 
