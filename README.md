@@ -32,14 +32,14 @@ There are two phases:
 ## How to contribute
 
 We invite you to contribute two types of data record:
-- A dataset record [\[Dataset Record Issue Template\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=dataset_template.yml&title=%5BAdd+a+dataset+record%5D%3A+)
-- A source record [\[Text Source Data Issue Template\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=source_text_data_template.yml&title=%5BData+Entry+for+%28Row%29+Text+Data%5D%3A+)
+- A dataset record [\[Dataset entry\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=dataset_template.yml&title=%5BAdd+a+dataset+record%5D%3A+)
+- A source record [\[Source data entry\]](https://github.com/impresso/test-catalogue/issues/new?assignees=&labels=&projects=&template=source_text_data_template.yml&title=%5BData+Entry+for+%28Row%29+Text+Data%5D%3A+)
 
 ### How to contribute a dataset record
 1. Please begin by carefully reading the [guidelines](#guidelines) below. 
 2. Complete a dataset or source issue template and submit it.
 3. A member of the SwissAi Data team will look at the issue, check if everything is complete and assess what next steps are necessary (dataset audit). If some information is missing, we may get back to you.
-4. If everything is ok, the issue will be labelled as `dataset_candidate`. This labeling triggers the creation of a `.json` file for the record, and adds the dataset to the list in the section below (via a github action).
+4. If everything is ok, the issue will be labelled as `dataset_candidate`. This labeling triggers the creation of a `.json` file for the record and adds the dataset to the list below (github actions).
 5. The dataset enters the preparation phase.
 
 ### How to contribute to a dataset preparation
