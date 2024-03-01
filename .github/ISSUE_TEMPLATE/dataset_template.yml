@@ -10,6 +10,8 @@ body:
     attributes:
       value: |
         ## Let's start with some generic information
+        - bullet point
+        - another bullet
   - type: input
     id: uid
     attributes:
