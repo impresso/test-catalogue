@@ -61,6 +61,10 @@ body:
       options: [ready-to-process, requires-copyright-clearance, requires-format-conversion, requires-quality-enhancement]
     validations:
       required: false
+  - type: markdown
+    attributes:
+      value: |
+       Thank you for submitting a dataset!
 
 
 
