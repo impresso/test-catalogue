@@ -9,7 +9,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Let's start with some generic information.
+        **Let's start with some generic information**
   - type: input
     id: uid
     attributes:
